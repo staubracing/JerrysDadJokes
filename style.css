@@ -1,0 +1,46 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #333; /* This is a dark grey color */
+}
+h1 {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 3rem;
+  color: #fff;
+}
+button {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  margin: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+}
+#apiButton {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.joke {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: center;
+  margin: 1rem;
+}
