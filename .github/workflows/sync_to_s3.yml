@@ -19,3 +19,7 @@ jobs:
 
       - name: Sync to S3
         run: aws s3 sync . s3://jerrysdadjokes.com --exclude ".git/*" --exclude ".github/*" --exclude "README.md"
+
+      - name: Invalidate CloudFront Cache
+        if: github.ref == 'refs/heads/main'
+        run: aws cloudfront create-invalidation --distribution-id EH8EMQPO94UJ --paths "/*"
