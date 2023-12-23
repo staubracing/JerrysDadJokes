@@ -2,7 +2,7 @@ document.getElementById('apiButton').addEventListener('click', function () {
   const existingJoke = document.querySelector('.joke');
 
   if (existingJoke) {
-    existingJoke.remove();
+    existingJoke.remove(); // Remove the existing joke if it exists
   }
 
   axios
