@@ -28,6 +28,12 @@ button {
   cursor: pointer;
   box-shadow: 2px 2px 4px #000000;
 }
+
+button:active {
+  transform: scale(0.95); /* Makes the button slightly smaller */
+  background-color: #3f8f40; /* Changes the background color */
+}
+
 #apiButton {
   background-color: #4caf50; /* Green */
   border: none;
@@ -53,3 +59,4 @@ button {
   width: 80%;
   text-align: center;
 }
+

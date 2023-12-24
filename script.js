@@ -1,10 +1,4 @@
 document.getElementById('apiButton').addEventListener('click', function () {
-  const existingJoke = document.querySelector('.joke');
-
-  if (existingJoke) {
-    existingJoke.remove(); // Remove the existing joke if it exists
-  }
-
   axios
     .get('https://icanhazdadjoke.com/', {
       headers: {
@@ -12,10 +6,9 @@ document.getElementById('apiButton').addEventListener('click', function () {
       },
     })
     .then((response) => {
-      const p = document.createElement('p');
-      p.textContent = response.data.joke;
-      p.className = 'joke'; // Assign the class 'joke' to the paragraph
-      document.body.appendChild(p);
+      // Select the jokeOutput div and update its textContent with the new joke
+      const jokeOutput = document.getElementById('jokeOutput');
+      jokeOutput.textContent = response.data.joke;
     })
     .catch((error) => console.error('Error:', error));
 });
