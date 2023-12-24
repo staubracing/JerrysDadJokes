@@ -10,9 +10,12 @@ body {
 h1 {
   text-align: center;
   font-family: 'Roboto', sans-serif;
-  font-size: 3rem;
+  font-size: 3.8rem;
+  font-style: italic; 
   color: #fff;
+  text-shadow: 2px 2px 4px #000000;
 }
+  
 button {
   font-family: 'Roboto', sans-serif;
   font-size: 1.5rem;
@@ -23,6 +26,7 @@ button {
   background-color: #fff;
   color: #333;
   cursor: pointer;
+  box-shadow: 2px 2px 4px #000000;
 }
 #apiButton {
   background-color: #4caf50; /* Green */
