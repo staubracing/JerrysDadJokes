@@ -22,11 +22,14 @@ document.getElementById('weatherButton').addEventListener('click', function () {
     axios.get(`https://api.weather.gov/points/${lat},${lon}`)
       .then(function (response) {
         var forecastUrl = response.data.properties.forecast;
-        return axios.get(forecastUrl);
+        var city = response.data.properties.relativeLocation.properties.city;
+        return axios.get(forecastUrl).then(function (forecastResponse) {
+          return { forecast: forecastResponse, city: city };
+        });
       })
-      .then(function (response) {
-        var forecast = response.data.properties.periods[0];
-        document.getElementById('weatherOutput').innerText = `Today's forecast: ${forecast.shortForecast}, temperature: ${forecast.temperature} ${forecast.temperatureUnit}`;
+      .then(function (data) {
+        var forecast = data.forecast.data.properties.periods[0];
+        document.getElementById('weatherOutput').innerText = `In  ${data.city}, Today's forecast is ${forecast.shortForecast}, Temperature: ${forecast.temperature} ${forecast.temperatureUnit}`;
       })
       .catch(function (error) {
         console.log(error);
