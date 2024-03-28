@@ -9,15 +9,15 @@ body {
 }
 h1 {
   text-align: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 3.8rem;
-  font-style: italic; 
+  font-style: italic;
   color: #fff;
   text-shadow: 2px 2px 4px #000000;
 }
-  
+
 button {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
   padding: 0.5rem 1rem;
   margin: 1rem;
@@ -34,7 +34,7 @@ button:active {
   background-color: #3f8f40; /* Changes the background color */
 }
 
-#apiButton {
+#jokeButton {
   background-color: #4caf50; /* Green */
   border: none;
   color: white;
@@ -48,12 +48,12 @@ button:active {
 }
 
 .joke {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
-  color: #f5efee; 
-  text-shadow: 2px 2px 4px #000000; 
+  color: #f5efee;
+  text-shadow: 2px 2px 4px #000000;
   margin-top: 2rem;
- 
+
   padding: 1rem;
   border-radius: 10px;
   width: 80%;
@@ -61,12 +61,12 @@ button:active {
 }
 
 .weather {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
-  color: #16b816; 
-  text-shadow: 2px 2px 4px #000000; 
+  color: #16b816;
+  text-shadow: 2px 2px 4px #000000;
   margin-top: 2rem;
- 
+
   padding: 1rem;
   border-radius: 10px;
   width: 80%;
@@ -82,7 +82,6 @@ button:active {
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-  
 }
 
 #weatherOutput {
@@ -91,7 +90,6 @@ button:active {
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
-
 }
 
 .weather {
