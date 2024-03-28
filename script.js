@@ -14,7 +14,10 @@ document.getElementById("jokeButton").addEventListener("click", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("weatherButton").click();
+  document.getElementById("weatherButton");
+  if (weatherButton) {
+    weatherButton.click();
+  }
   navigator.geolocation.getCurrentPosition(function (position) {
     var lat = position.coords.latitude;
     var lon = position.coords.longitude;
