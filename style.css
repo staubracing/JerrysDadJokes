@@ -1,41 +1,23 @@
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  background-color: #333; /* This is a dark grey color */
-}
-h1 {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
   text-align: center;
-  font-family: "Roboto", sans-serif;
-  font-size: 3.8rem;
-  font-style: italic;
-  color: #fff;
-  text-shadow: 2px 2px 4px #000000;
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+}
+
+h1 {
+  color: #4caf50;
+}
+
+#introduction {
+  margin-bottom: 20px;
 }
 
 button {
-  font-family: "Roboto", sans-serif;
-  font-size: 1.5rem;
-  padding: 0.5rem 1rem;
-  margin: 1rem;
-  border: none;
-  border-radius: 5px;
-  background-color: #fff;
-  color: #333;
-  cursor: pointer;
-  box-shadow: 2px 2px 4px #000000;
-}
-
-button:active {
-  transform: scale(0.95); /* Makes the button slightly smaller */
-  background-color: #3f8f40; /* Changes the background color */
-}
-
-#jokeButton {
-  background-color: #4caf50; /* Green */
+  background-color: #4caf50;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -45,53 +27,52 @@ button:active {
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
 
-.joke {
-  font-family: "Roboto", sans-serif;
-  font-size: 1.5rem;
-  color: #f5efee;
-  text-shadow: 2px 2px 4px #000000;
-  margin-top: 2rem;
+button:hover {
+  background-color: #45a049;
+}
 
-  padding: 1rem;
+#jokeOutput {
+  margin: 20px 0;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #2a2a2a;
+  padding: 20px;
   border-radius: 10px;
-  width: 80%;
-  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.weather {
-  font-family: "Roboto", sans-serif;
-  font-size: 1.5rem;
-  color: #16b816;
-  text-shadow: 2px 2px 4px #000000;
-  margin-top: 2rem;
-
-  padding: 1rem;
-  border-radius: 10px;
-  width: 80%;
-  text-align: center;
+#stats {
+  margin-top: 20px;
+  font-style: italic;
+  color: #b0b0b0;
 }
 
-#weatherButton {
-  background-color: blue;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
+#favorites {
+  margin-top: 40px;
+  text-align: left;
 }
 
-#weatherOutput {
-  font-size: 20px;
-  color: white;
-  text-align: center;
-  margin-top: 10px;
+#favoritesList {
+  list-style-type: none;
+  padding: 0;
+}
+
+#favoritesList li {
   margin-bottom: 10px;
+  padding: 10px;
+  background-color: #2a2a2a;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.weather {
-  padding: 10px;
+#favoriteButton {
+  background-color: #3498db;
+}
+
+#favoriteButton:hover {
+  background-color: #2980b9;
 }
