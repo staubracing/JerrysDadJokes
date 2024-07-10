@@ -1,3 +1,21 @@
+.corner-icon {
+  position: fixed;
+  opacity: 0.2;
+  transition: opacity 0.3s ease;
+}
+
+.corner-icon:hover {
+  opacity: 0.8;
+}
+
+.top-left {
+  top: 20px;
+  left: 20px;
+}
+.icon {
+  fill: currentColor;
+}
+
 body {
   font-family: Arial, sans-serif;
   max-width: 800px;
@@ -6,10 +24,41 @@ body {
   text-align: center;
   background-color: #1a1a1a;
   color: #e0e0e0;
+  position: relative;
+  min-height: 100vh;
 }
 
-h1 {
+.corner-icon {
+  position: fixed;
+  opacity: 0.2;
+  transition: opacity 0.3s ease;
+}
+
+.corner-icon:hover {
+  opacity: 0.8;
+}
+
+.top-left {
+  top: 20px;
+  left: 20px;
+}
+
+.top-right {
+  top: 20px;
+  right: 20px;
+}
+
+.icon {
+  fill: currentColor;
+}
+
+h1,
+h2 {
   color: #4caf50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 #introduction {
@@ -23,7 +72,9 @@ button {
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
