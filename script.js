@@ -4,11 +4,11 @@ let favorites = [];
 document.addEventListener("DOMContentLoaded", () => {
   const jokeButton = document.getElementById("jokeButton");
   const jokeOutput = document.getElementById("jokeOutput");
-  const favoriteButton = document.getElementById("favoriteButton");
+  const addFavoriteButton = document.getElementById("addFavoriteButton");
   const favoritesList = document.getElementById("favoritesList");
 
   jokeButton.addEventListener("click", fetchNewJoke);
-  favoriteButton.addEventListener("click", toggleFavorite);
+  addFavoriteButton.addEventListener("click", addFavorite);
 
   fetchNewJoke();
 });
@@ -26,7 +26,6 @@ function fetchNewJoke() {
       jokeOutput.dataset.jokeId = response.data.id;
       jokeCount++;
       updateJokeCount();
-      updateFavoriteButton();
     })
     .catch((error) => console.error("Error:", error));
 }
@@ -35,25 +34,22 @@ function updateJokeCount() {
   document.getElementById("jokeCount").textContent = jokeCount;
 }
 
-function toggleFavorite() {
+function addFavorite() {
   const jokeId = jokeOutput.dataset.jokeId;
   const jokeText = jokeOutput.textContent;
 
+  if (!favorites.some((fav) => fav.id === jokeId)) {
+    favorites.push({ id: jokeId, text: jokeText });
+    updateFavoritesList();
+  }
+}
+
+function removeFavorite(jokeId) {
   const index = favorites.findIndex((fav) => fav.id === jokeId);
   if (index > -1) {
     favorites.splice(index, 1);
-  } else {
-    favorites.push({ id: jokeId, text: jokeText });
+    updateFavoritesList();
   }
-
-  updateFavoriteButton();
-  updateFavoritesList();
-}
-
-function updateFavoriteButton() {
-  const jokeId = jokeOutput.dataset.jokeId;
-  const isFavorite = favorites.some((fav) => fav.id === jokeId);
-  favoriteButton.textContent = isFavorite ? "Remove from Favorites" : "Add to Favorites";
 }
 
 function updateFavoritesList() {
@@ -61,6 +57,13 @@ function updateFavoritesList() {
   favorites.forEach((fav) => {
     const li = document.createElement("li");
     li.textContent = fav.text;
+
+    const removeButton = document.createElement("button");
+    removeButton.textContent = "Remove";
+    removeButton.className = "remove-favorite-button";
+    removeButton.addEventListener("click", () => removeFavorite(fav.id));
+
+    li.appendChild(removeButton);
     favoritesList.appendChild(li);
   });
 }
