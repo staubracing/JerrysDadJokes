@@ -87,15 +87,21 @@ button:hover {
 }
 
 .remove-favorite-button {
-  background-color: #e74c3c;
+  background-color: #e74c3c; /* Red background */
   color: white;
   border: none;
-  padding: 2px 7px; /* Adjust padding */
+  padding: 0 5px; /* Reduced padding */
   margin-left: 8px;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 50%; /* Circular shape */
   transition: background-color 0.3s;
-  font-size: 10px; /* Adjust font size */
+  font-size: 14px; /* Increased font size for visibility */
+  content: "X"; /* Display 'X' */
+  display: inline-block;
+  line-height: 20px; /* Center 'X' vertically */
+  width: 20px; /* Fixed width */
+  height: 20px; /* Fixed height */
+  text-align: center; /* Center 'X' horizontally */
 }
 
 .remove-favorite-button:hover {

@@ -91,7 +91,7 @@ function updateFavoritesList() {
     li.textContent = fav.text;
 
     const removeButton = document.createElement("button");
-    removeButton.textContent = "Remove";
+    removeButton.textContent = "X";
     removeButton.className = "remove-favorite-button";
     removeButton.addEventListener("click", () => removeFavorite(fav.id));
 
