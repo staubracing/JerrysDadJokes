@@ -27,14 +27,14 @@ function fetchNewJoke() {
       console.log(response.data.joke);
       jokeOutput.textContent = response.data.joke;
       jokeOutput.dataset.jokeId = response.data.id;
-      jokeCount++;
-      saveJokeCountToLocalStorage();
       updateJokeCount();
+      saveJokeCountToLocalStorage();
     })
     .catch((error) => console.error("Error:", error));
 }
 
 function updateJokeCount() {
+  jokeCount++;
   document.getElementById("jokeCount").textContent = jokeCount;
 }
 
